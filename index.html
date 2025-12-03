@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blinkit Login & Register</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+
+        <!-- LOGIN FORM -->
+        <div class="form-box" id="login-box">
+            <img src="pic.jpeg" alt="Blinkit Logo" class="app-logo">
+            <h3>Login</h3>
+            <form id="login-form">
+                <input type="text" id="login-identifier" placeholder="Email or Phone" required />
+                <input type="password" id="login-password" placeholder="Password" required />
+                <button type="submit" class="btn primary">Login</button>
+                <p class="forgot-password">Forgot Password?</p>
+                <div class="social-buttons">
+                    <button class="social-btn google"><img src="https://img.icons8.com/color/48/google-logo.png"> Sign in with Google</button>
+                    <button class="social-btn microsoft"><img src="https://img.icons8.com/color/48/microsoft.png"> Sign in with Microsoft</button>
+                </div>
+                <p class="switch">Don't have an account? <span onclick="toggleForms()">Register</span></p>
+            </form>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div class="form-box" id="register-box" style="display: none;">
+            <img src="pic.jpeg" alt="Blinkit Logo" class="app-logo">
+            <h3>Register</h3>
+            <form id="register-form">
+                <input type="text" id="reg-name" placeholder="Full Name" required />
+                <input type="email" id="reg-email" placeholder="Email" required />
+                <input type="text" id="reg-phone" placeholder="Phone Number" required />
+                <input type="password" id="reg-password" placeholder="Password" required />
+                <input type="password" id="reg-confirm" placeholder="Confirm Password" required />
+                <button type="submit" class="btn primary">Register</button>
+                <div class="social-buttons">
+                    <button class="social-btn google"><img src="https://img.icons8.com/color/48/google-logo.png"> Sign in with Google</button>
+                    <button class="social-btn microsoft"><img src="https://img.icons8.com/color/48/microsoft.png"> Sign in with Microsoft</button>
+                </div>
+                <p class="switch">Already have an account? <span onclick="toggleForms()">Login</span></p>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- SUCCESS PAGE -->
+    <div id="welcome-page" class="welcome">
+        <h1>Welcome to Enquero Blinkit App 🎉</h1>
+    </div>
+
+    <!-- FORGOT PASSWORD MODAL -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content animate-popup">
+            <span class="close" onclick="closeForgotPassword()">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="forgot-password-form">
+                <input type="text" id="fp-identifier" placeholder="Email or Phone" required>
+                <input type="password" id="fp-new-password" placeholder="New Password" required>
+                <input type="password" id="fp-confirm-password" placeholder="Confirm New Password" required>
+                <button type="submit">Reset Password</button>
+                <button type="button" class="cancel-btn" onclick="closeForgotPassword()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

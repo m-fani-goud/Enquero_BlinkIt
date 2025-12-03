@@ -1,0 +1,231 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("baack.jpeg") no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    backdrop-filter: blur(5px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------- APP LOGO ---------- */
+.app-logo {
+    width: 140px;
+    margin: 0 auto 10px auto;
+    display: block;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25),
+                0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Box */
+.form-box {
+    width: 350px;
+    padding: 22px 25px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.7s ease;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+.btn {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: #ffcc00;
+}
+
+/* Social Buttons */
+.social-buttons {
+    margin-top: 15px;
+}
+
+.social-btn {
+    width: 90%;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 8px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-btn img {
+    width: 22px;
+    margin-right: 6px;
+}
+
+.switch span {
+    color: #0077ff;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #0077ff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Welcome Page */
+.welcome {
+    display: none;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 22px;
+    width: 90%;
+    max-width: 340px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #ccc;
+    margin-top: 8px;
+    padding: 10px;
+    width: 90%;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE DESIGN
+------------------------------------------------------------- */
+
+/* ===== Tablet (481px – 1024px) ===== */
+@media (max-width: 1024px) {
+    .form-box {
+        width: 380px;
+        padding: 26px;
+    }
+    .app-logo {
+        width: 160px;
+    }
+    input, .btn, .social-btn {
+        font-size: 17px;
+    }
+}
+
+/* ===== Mobile (0 – 480px) ===== */
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .form-box {
+        width: 100%;
+        padding: 22px;
+        border-radius: 14px;
+        box-shadow: none;
+    }
+
+    .app-logo {
+        width: 110px;
+        margin-bottom: 14px;
+    }
+
+    input {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 17px;
+    }
+
+    .social-btn {
+        width: 100%;
+        padding: 13px;
+    }
+
+    .modal-content {
+        width: 92%;
+        padding: 18px;
+    }
+}
+
+/* ===== Large Desktop Screens (1440px+) ===== */
+@media (min-width: 1440px) {
+    .form-box {
+        width: 420px;
+        padding: 30px;
+    }
+    input, .btn, .social-btn {
+        font-size: 18px;
+    }
+    .app-logo {
+        width: 170px;
+    }
+}
